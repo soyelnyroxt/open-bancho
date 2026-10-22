@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>open!bancho</title>
+  <link rel="icon" href="default-avatar.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="top-in">
+      <a class="logo" href="#/"><span class="disc">open!</span><span class="hide-sm">bancho</span></a>
+      <nav class="nav" id="nav">
+        <a href="#/">inicio</a>
+        <a href="#/rankings">clasificaciones</a>
+        <a href="#/maps">mapas</a>
+        <a href="#/multi">multijugador</a>
+        <a href="#/chat">chat</a>
+      </nav>
+      <form class="search hide-sm" id="search"><input id="q" placeholder="Buscar jugador" autocomplete="off"></form>
+      <div class="me" id="me"></div>
+    </div>
+  </header>
+  <div class="menu" id="menu">
+    <a href="#" id="menu-profile">Mi perfil</a>
+    <a href="#/settings">Ajustes del perfil</a>
+    <a href="#/chat">Mensajes</a>
+    <a href="#" id="menu-logout">Cerrar sesión</a>
+  </div>
+  <main id="app"><div class="empty">Cargando...</div></main>
+  <footer>open!bancho · servidor propio de open!stable · proyecto independiente, sin relación con osu! ni ppy</footer>
+
+  <div class="modal" id="login">
+    <form class="box form" id="login-form">
+      <h2 id="login-title">Iniciar sesión</h2>
+      <label>Usuario <input type="text" id="l-name" maxlength="15" autocomplete="username" required></label>
+      <label>Contraseña <input type="password" id="l-pass" maxlength="64" autocomplete="current-password" required></label>
+      <div class="err" id="l-err"></div>
+      <button class="btn" id="l-go">Iniciar sesión</button>
+      <a href="#" id="l-switch">¿No tienes cuenta? Créala aquí</a>
+      <a href="#" id="l-close" class="muted">Cerrar</a>
+    </form>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
